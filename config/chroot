@@ -6,7 +6,7 @@ LH_CHROOT_FILESYSTEM="squashfs"
 
 # $LH_UNION_FILESYSTEM: set union filesystem
 # (Default: aufs)
-LH_UNION_FILESYSTEM="aufs"
+LH_UNION_FILESYSTEM="unionfs"
 
 # $LH_EXPOSED_ROOT: expose root as read only
 # (Default: disabled)
