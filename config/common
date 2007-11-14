@@ -64,6 +64,10 @@ LH_DEBCONF_PRIORITY="critical"
 # (Default: auto)
 LH_INITRAMFS="auto"
 
+# $LH_FDISK: set fdisk program
+# (Default: autodetected)
+LH_FDISK="fdisk"
+
 # $LH_LOSETUP: set losetup program
 # (Default: autodetected)
 LH_LOSETUP="losetup"
@@ -75,6 +79,10 @@ LH_MODE="debian"
 # $LH_ROOT_COMMAND: use sudo or equivalent
 # (Default: empty)
 #LH_ROOT_COMMAND="sudo"
+
+# $LH_USE_FAKEROOT: use fakeroot/fakechroot
+# (Default: disabled)
+LH_USE_FAKEROOT="disabled"
 
 # $LH_TASKSEL: set tasksel program
 # (Default: aptitude)

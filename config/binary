@@ -20,6 +20,10 @@ LH_BOOTAPPEND_INSTALL="-- ${LH_BOOTAPPEND_LIVE}"
 # (Default: syslinux)
 LH_BOOTLOADER="syslinux"
 
+# $LH_CHECKSUMS: set checksums
+# (Default: enabled)
+LH_CHECKSUMS="enabled"
+
 # ${LH_CHROOT_BUILD: control if we build binary images chrooted
 # (Default: enabled)
 # DO NEVER, *NEVER*, *N*E*V*E*R* SET THIS OPTION to disabled.
@@ -50,8 +54,8 @@ LH_HOSTNAME="debian"
 LH_ISO_APPLICATION="Debian Live"
 
 # $LH_ISO_PREPARER: set iso preparer
-# (Default: live-helper 1.0~a34; http://packages.qa.debian.org/live-helper)
-LH_ISO_PREPARER="live-helper 1.0~a34; http://packages.qa.debian.org/live-helper"
+# (Default: live-helper 1.0~a36; http://packages.qa.debian.org/live-helper)
+LH_ISO_PREPARER="live-helper 1.0~a36; http://packages.qa.debian.org/live-helper"
 
 # $LH_ISO_PUBLISHER: set iso preparer
 # (Default: Debian Live project; http://debian-live.alioth.debian.org/; debian-live-devel@lists.alioth.debian.org)
@@ -101,7 +105,7 @@ LH_NET_COW_SERVER=""
 # (Default: empty)
 LH_SYSLINUX_SPLASH=""
 
-# $LH_SYSLINUX_TIMEOUT: set custom syslinux timeout
+# $LH_SYSLINUX_TIMEOUT: set custom syslinux timeout in seconds
 # (Default: 0)
 LH_SYSLINUX_TIMEOUT="50"
 
