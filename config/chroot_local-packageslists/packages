@@ -1,1 +1,5 @@
 patch
+bind9
+dnsutils
+dhcp3-server
+snmpd
