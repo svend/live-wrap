@@ -1,9 +1,0 @@
-syntax: glob
-binary
-binary.img
-binary.iso
-cache
-chroot
-chroot.tmp
-.lock
-.stage

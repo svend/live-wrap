@@ -1,0 +1,9 @@
+/binary
+/binary.iso
+/binary.list
+/binary.packages
+/cache
+/chroot
+/chroot.tmp
+/.lock
+/.stage
