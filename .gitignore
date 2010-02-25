@@ -5,5 +5,10 @@
 /cache
 /chroot
 /chroot.tmp
+/config/binary
+/config/bootstrap
+/config/chroot
+/config/common
+/config/source
 /.lock
 /.stage
