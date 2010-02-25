@@ -2,8 +2,7 @@
 
 lh config noautoconfig \
 	--binary-images usb-hdd \
-	--distribution etch \
+	--distribution lenny \
 	--bootappend-live "ip=frommedia console=ttyS0,9600n8" \
 	--syslinux-timeout 50 \
-	--initramfs casper \
 	"$@"
