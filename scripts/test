@@ -12,6 +12,7 @@ read answer
 
 screen -t host2 \
 kvm --hda binary.img --nographic \
-    --net nic,macaddr=52:54:00:12:35:56,vlan=0 \
-    --net socket,connect=127.0.0.1:1234,vlan=0 \
-    --net nic,macaddr=52:54:00:12:35:57,vlan=1
+    --net nic,macaddr=52:54:00:12:35:56,vlan=2 \
+    --net socket,connect=127.0.0.1:1234,vlan=2 \
+    --net nic,macaddr=52:54:00:12:35:57,vlan=3 \
+    --net socket,listen=127.0.0.1:1235,vlan=3
