@@ -2,8 +2,8 @@
 
 lh config noautoconfig \
 	--binary-images usb-hdd \
-	--distribution lenny \
 	--bootappend-live "ip=frommedia console=tty0 console=ttyS0,9600n8 live-getty quickreboot" \
+	--distribution lenny \
 	--memtest none \
 	--syslinux-timeout 5 \
 	"$@"
