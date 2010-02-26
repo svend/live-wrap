@@ -5,7 +5,7 @@ lh config noautoconfig \
 	--binary-images usb-hdd \
 	--bootappend-live "ip=frommedia console=tty0 console=ttyS0,9600n8 live-getty quickreboot" \
 	--distribution lenny \
-	--linux-flavours 686 \
+	--linux-flavours 486 \
 	--memtest none \
 	--syslinux-timeout 5 \
 	"$@"
