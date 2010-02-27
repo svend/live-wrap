@@ -1,6 +1,7 @@
 #!/bin/sh
 
 lh config noautoconfig \
+	--architecture i386 \
 	--binary-indices false \
 	--binary-images usb-hdd \
 	--bootappend-live "ip=frommedia console=tty0 console=ttyS0,9600n8 live-getty quickreboot" \
