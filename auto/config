@@ -1,6 +1,7 @@
 #!/bin/sh
 
 lh config noautoconfig \
+	--apt-recommends false \
 	--architecture i386 \
 	--binary-indices false \
 	--binary-images usb-hdd \
