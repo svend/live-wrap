@@ -1,5 +1,4 @@
 bind9
 dhcp3-server
-dnsutils
 hostap-utils
 wireless-tools
