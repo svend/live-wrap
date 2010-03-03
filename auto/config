@@ -5,7 +5,7 @@ lh config noautoconfig \
 	--architecture i386 \
 	--binary-indices false \
 	--binary-images usb-hdd \
-	--bootappend-live "ip=frommedia console=tty0 console=ttyS0,9600n8 live-getty nolocales nouser username=root quickreboot" \
+	--bootappend-live "ip=frommedia console=tty0 console=ttyS0,38400n8 live-getty nolocales nouser username=root quickreboot" \
 	--distribution lenny \
 	--linux-flavours 486 \
 	--memtest none \
