@@ -1,4 +1,4 @@
 #!/bin/sh
-# Disable all but one local consoles
+# Disable all local consoles
 
-sed -i 's/^\([23456].*\)/#\1/' /etc/inittab
+sed -i 's/^\([123456].*\)/#\1/' /etc/inittab
