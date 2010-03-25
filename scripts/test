@@ -1,6 +1,5 @@
 #!/bin/sh
 
-screen -t host1 \
 kvm --hda binary.img --nographic \
     --net nic,macaddr=52:54:00:12:34:56,vlan=0 \
     --net user,vlan=0 \
