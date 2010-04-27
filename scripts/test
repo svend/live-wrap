@@ -4,4 +4,5 @@ kvm --hda binary.img --nographic \
     --net nic,macaddr=52:54:00:12:34:56,vlan=0 \
     --net user,vlan=0 \
     --net nic,macaddr=52:54:00:12:34:57,vlan=1 \
-    --net socket,listen=127.0.0.1:1234,vlan=1
+    --net socket,listen=127.0.0.1:1234,vlan=1 \
+    "$@"
