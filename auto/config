@@ -1,6 +1,6 @@
 #!/bin/sh
 
-lh config noautoconfig \
+lh config noauto \
 	--apt-recommends false \
 	--architecture i386 \
 	--binary-indices false \
