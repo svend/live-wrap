@@ -2,4 +2,5 @@ atl2-modules-2.6-686
 bind9
 dhcp3-server
 hostap-utils
+madwifi-tools
 wireless-tools
