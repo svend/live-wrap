@@ -7,7 +7,7 @@ lh config noautoconfig \
 	--binary-images usb-hdd \
 	--bootappend-live "ip=frommedia nolocales nouser username=root quickreboot" \
 	--distribution lenny \
-	--linux-flavours 486 \
+	--linux-flavours 686 \
 	--memtest none \
 	--syslinux-timeout 5 \
 	"$@"
