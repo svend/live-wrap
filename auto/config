@@ -3,6 +3,7 @@
 lh config noauto \
 	--apt-recommends false \
 	--architecture i386 \
+	--archive-areas "main contrib" \
 	--binary-indices false \
 	--binary-images usb-hdd \
 	--bootappend-live "ip=frommedia nolocales nouser username=root quickreboot" \
