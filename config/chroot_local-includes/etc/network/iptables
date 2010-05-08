@@ -20,4 +20,7 @@ COMMIT
 # Allow established connections
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 
+# Allow ICMP ping
+-A INPUT -p icmp --icmp-type echo-request -m state --state NEW -j ACCEPT
+
 COMMIT
