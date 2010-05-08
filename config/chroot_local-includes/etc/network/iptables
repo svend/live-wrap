@@ -8,7 +8,7 @@
 
 COMMIT
 
-# Drop incomming connections
+# Drop incoming connections
 *filter
 :INPUT DROP [0:0]
 :FORWARD ACCEPT [0:0]
