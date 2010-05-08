@@ -23,4 +23,7 @@ COMMIT
 # Allow ICMP ping
 -A INPUT -p icmp --icmp-type echo-request -m state --state NEW -j ACCEPT
 
+# Allow SSH
+-A INPUT -p tcp --dport ssh -m state --state NEW -j ACCEPT
+
 COMMIT
