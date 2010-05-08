@@ -1,5 +1,6 @@
 bind9
 dhcp3-server
 hostap-utils
+ntp
 openssh-server
 wireless-tools
