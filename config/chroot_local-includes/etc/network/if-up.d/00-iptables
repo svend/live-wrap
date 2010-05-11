@@ -1,0 +1,9 @@
+#! /bin/sh
+# Load iptables ruleset
+#
+# This file is run from /etc/network/if-up.d/.
+
+# Only run when the loopback interface is brought up
+[ "$IFACE" = "lo" ] || exit 0
+
+iptables-restore < /etc/network/iptables
