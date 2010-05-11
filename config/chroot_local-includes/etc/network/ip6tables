@@ -10,4 +10,7 @@
 # Allow all established connections
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 
+# Allow ICMP ping
+-A INPUT -p icmpv6 --icmpv6-type echo-request -m state --state NEW -j ACCEPT
+
 COMMIT
