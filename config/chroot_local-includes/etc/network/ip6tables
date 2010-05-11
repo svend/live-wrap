@@ -1,0 +1,13 @@
+# Drop incoming connections
+*filter
+:INPUT DROP [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+
+# Allow incoming connections from all interfaces except WAN
+-A INPUT ! -i eth0 -m state --state NEW -j ACCEPT
+
+# Allow all established connections
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+COMMIT

@@ -1,0 +1,9 @@
+#! /bin/sh
+# Load ip6tables ruleset
+#
+# This file is run from /etc/network/if-up.d/.
+
+# Only run when the loopback interface is brought up
+[ "$IFACE" = "lo" ] || exit 0
+
+ip6tables-restore < /etc/network/ip6tables
