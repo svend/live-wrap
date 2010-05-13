@@ -5,4 +5,5 @@ hostap-utils
 ntp
 openssh-server
 radvd
+snmpd
 wireless-tools
