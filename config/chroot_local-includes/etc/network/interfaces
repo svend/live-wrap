@@ -21,3 +21,5 @@ iface wlan0 inet static
 	broadcast 192.168.3.255
 	wireless-essid live-wrap
 	wireless-mode Master
+	up ip -6 addr add 2001:1938:269::1/64 $IFACE
+	down ip -6 addr del 2001:1938:269::1/64 $IFACE
