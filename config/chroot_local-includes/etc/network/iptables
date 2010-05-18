@@ -26,7 +26,4 @@ COMMIT
 # Allow SSH
 -A INPUT -p tcp --dport ssh -m state --state NEW -j ACCEPT
 
-# Allow SNMP from onyx
--A INPUT -s 72.13.95.43 -p udp --dport snmp -m state --state NEW -j ACCEPT
-
 COMMIT
