@@ -1,0 +1,16 @@
+# Drop incoming connections
+*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT ACCEPT [0:0]
+
+# Allow all established connections
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+# Allow ICMP
+-A INPUT -p icmpv6 -j ACCEPT
+
+# Allow SSH
+-A INPUT -p tcp --dport ssh -m state --state NEW -j ACCEPT
+
+COMMIT
