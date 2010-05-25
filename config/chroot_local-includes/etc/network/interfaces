@@ -2,7 +2,6 @@
 # /usr/share/doc/ifupdown/examples for more information.
 auto lo
 iface lo inet loopback
-	up iptables-restore < /etc/network/iptables
 
 auto wlan0
 iface wlan0 inet dhcp
