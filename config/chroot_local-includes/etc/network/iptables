@@ -2,5 +2,14 @@
 :INPUT DROP [0:0]
 :FORWARD ACCEPT [0:0]
 :OUTPUT ACCEPT [0:0]
--A INPUT -i eth0 -m state --state NEW -j DROP
+
+# Allow established connections
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+# Allow ICMP ping
+-A INPUT -p icmp --icmp-type echo-request -m state --state NEW -j ACCEPT
+
+# Allow SSH
+-A INPUT -p tcp --dport ssh -m state --state NEW -j ACCEPT
+
 COMMIT
