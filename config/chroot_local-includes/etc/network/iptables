@@ -1,5 +1,5 @@
 *filter
-:INPUT ACCEPT [0:0]
+:INPUT DROP [0:0]
 :FORWARD ACCEPT [0:0]
 :OUTPUT ACCEPT [0:0]
 -A INPUT -i eth0 -m state --state NEW -j DROP
