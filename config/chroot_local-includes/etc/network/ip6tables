@@ -13,6 +13,9 @@
 # Allow SSH
 -A INPUT -p tcp --dport ssh -m state --state NEW -j ACCEPT
 
+# Allow IPP from sixxs.net subnet
+-A INPUT -s 2001:1938:269::/48 -p tcp --dport ipp -m state --state NEW -j ACCEPT
+
 # Allow SNMP from onyx
 -A INPUT -s 2001:470:21:20::480d:5f2b -p udp --dport snmp -m state --state NEW -j ACCEPT
 
