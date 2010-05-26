@@ -9,6 +9,7 @@ lh config noauto \
 	--bootappend-live "ip=frommedia nolocales nouser username=root quickreboot" \
 	--distribution lenny \
 	--linux-flavours 686 \
+	--linux-packages "linux-image-2.6 aufs-modules-2.6" \
 	--memtest none \
 	--syslinux-timeout 5 \
 	"$@"
