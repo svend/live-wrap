@@ -1,4 +1,5 @@
 cups
+cups-client
 openssh-server
 snmpd
 wireless-tools
