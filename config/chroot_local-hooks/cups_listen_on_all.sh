@@ -1,4 +1,6 @@
 #!/bin/sh
 # CUPS: Listen on all interfaces
 
-sed -i '/^Listen/s/localhost/*/' /etc/cups/cupsd.conf
+/etc/init.d/cups start
+cupsctl --share-printers
+/etc/init.d/cups stop
