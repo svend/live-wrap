@@ -9,6 +9,9 @@
 # Allow ICMP ping
 -A INPUT -p icmp --icmp-type echo-request -m state --state NEW -j ACCEPT
 
+# mDNS
+-A INPUT -p udp --dport mdns -d 224.0.0.251 -j ACCEPT
+
 # Allow SSH
 -A INPUT -p tcp --dport ssh -m state --state NEW -j ACCEPT
 

@@ -10,6 +10,9 @@
 # Allow ICMP
 -A INPUT -p icmpv6 -j ACCEPT
 
+# mDNS
+-A INPUT -p udp --dport mdns -d ff02::fb -j ACCEPT
+
 # Allow SSH
 -A INPUT -p tcp --dport ssh -m state --state NEW -j ACCEPT
 
