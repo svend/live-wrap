@@ -7,6 +7,7 @@ lh config noauto \
 	--binary-images usb-hdd \
 	--bootappend-live "ip=frommedia console=ttyS0,38400n8 live-getty nolocales nouser username=root quickreboot" \
 	--distribution lenny \
+	--hostname pebble \
 	--linux-flavours 486 \
 	--memtest none \
 	--syslinux-timeout 5 \
