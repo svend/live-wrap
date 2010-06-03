@@ -13,17 +13,28 @@ COMMIT
 :INPUT DROP [0:0]
 :FORWARD ACCEPT [0:0]
 :OUTPUT ACCEPT [0:0]
+:LAN-INPUT - [0:0]
 
-# Allow incoming connections from all interfaces except WAN
--A INPUT ! -i eth0 -m state --state NEW -j ACCEPT
+# Allow localhost traffic
+-A INPUT -i lo -j ACCEPT
+
+# Allow ICMP
+-A INPUT -p icmp -j ACCEPT
 
 # Allow established connections
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 
-# Allow ICMP ping
--A INPUT -p icmp --icmp-type echo-request -m state --state NEW -j ACCEPT
-
 # Allow SSH
 -A INPUT -p tcp --dport ssh -m state --state NEW -j ACCEPT
+
+-A INPUT -i eth1 -j LAN-INPUT
+-A INPUT -i wlan0 -j LAN-INPUT
+-A INPUT -j REJECT --reject-with icmp-host-prohibited
+
+-A LAN-INPUT -p udp --dport domain -j ACCEPT
+-A LAN-INPUT -p tcp --dport domain -j ACCEPT
+-A LAN-INPUT -p udp --dport bootps -j ACCEPT
+-A LAN-INPUT -p udp --dport mdns -d 224.0.0.251 -j ACCEPT
+-A LAN-INPUT -j REJECT --reject-with icmp-host-prohibited
 
 COMMIT
