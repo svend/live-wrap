@@ -27,6 +27,5 @@
 -A LAN-INPUT -p udp --dport domain -j ACCEPT
 -A LAN-INPUT -p tcp --dport domain -j ACCEPT
 -A LAN-INPUT -p udp --dport mdns -d ff02::fb -j ACCEPT
--A LAN-INPUT -j REJECT --reject-with icmp6-adm-prohibited
 
 COMMIT

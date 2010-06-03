@@ -35,6 +35,5 @@ COMMIT
 -A LAN-INPUT -p tcp --dport domain -j ACCEPT
 -A LAN-INPUT -p udp --dport bootps -j ACCEPT
 -A LAN-INPUT -p udp --dport mdns -d 224.0.0.251 -j ACCEPT
--A LAN-INPUT -j REJECT --reject-with icmp-host-prohibited
 
 COMMIT
