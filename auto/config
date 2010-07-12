@@ -10,5 +10,6 @@ lh config noauto \
 	--hostname pebble \
 	--linux-flavours 486 \
 	--memtest none \
+	--packages-lists minimal \
 	--syslinux-timeout 5 \
 	"$@"
