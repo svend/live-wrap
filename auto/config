@@ -1,6 +1,6 @@
 #!/bin/sh
 
-lh config noauto \
+lb config noauto \
 	--apt-recommends false \
 	--architecture i386 \
 	--archive-areas "main contrib" \
