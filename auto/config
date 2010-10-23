@@ -10,7 +10,6 @@ lb config noauto \
 	--distribution squeeze \
 	--hostname opal \
 	--linux-flavours 686 \
-	--linux-packages "linux-image-2.6 aufs-modules-2.6" \
 	--memtest none \
 	--syslinux-timeout 5 \
 	"$@"
