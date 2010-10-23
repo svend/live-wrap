@@ -6,7 +6,7 @@ lh config noauto \
 	--binary-indices false \
 	--binary-images usb-hdd \
 	--bootappend-live "ip=frommedia console=ttyS0,38400n8 live-getty nouser username=root quickreboot" \
-	--distribution lenny \
+	--distribution squeeze \
 	--hostname pebble \
 	--linux-flavours 486 \
 	--memtest none \
