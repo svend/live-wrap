@@ -7,7 +7,7 @@ lb config noauto \
 	--binary-indices false \
 	--binary-images usb-hdd \
 	--bootappend-live "ip=frommedia nolocales nouser username=root quickreboot" \
-	--distribution lenny \
+	--distribution squeeze \
 	--hostname opal \
 	--linux-flavours 686 \
 	--linux-packages "linux-image-2.6 aufs-modules-2.6" \
