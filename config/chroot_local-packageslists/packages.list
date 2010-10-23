@@ -1,6 +1,7 @@
 avahi-utils
 cups
 cups-client
+ghostscript-cups
 openssh-server
 snmpd
 wireless-tools
