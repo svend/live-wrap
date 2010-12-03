@@ -5,6 +5,7 @@ dhcp3-server
 hostap-utils
 ntp
 openssh-server
+pwgen
 radvd
 snmpd
 wireless-tools
