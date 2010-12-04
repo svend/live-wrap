@@ -3,5 +3,6 @@ cups
 cups-client
 ghostscript-cups
 openssh-server
+pwgen
 snmpd
 wireless-tools
