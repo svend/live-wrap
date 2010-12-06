@@ -15,10 +15,10 @@
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 
 # Allow SNMP from onyx
--A INPUT -s 2001:470:21:20::480d:5f2b -p udp --dport snmp -m state --state NEW -j ACCEPT
+-A INPUT -s 2001:470:21:20::480d:5f2b -p udp --dport snmp -j ACCEPT
 
 # Allow SSH
--A INPUT -p tcp --dport ssh -m state --state NEW -j ACCEPT
+-A INPUT -p tcp --dport ssh -j ACCEPT
 
 -A INPUT -i eth1 -j LAN-INPUT
 -A INPUT -i wlan0 -j LAN-INPUT
