@@ -6,8 +6,8 @@
 # Allow established connections
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 
-# Allow ICMP ping
--A INPUT -p icmp --icmp-type echo-request -m state --state NEW -j ACCEPT
+# Allow ICMP
+-A INPUT -p icmp -j ACCEPT
 
 # mDNS
 -A INPUT -p udp --dport mdns -d 224.0.0.251 -j ACCEPT
