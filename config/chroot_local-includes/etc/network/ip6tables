@@ -14,12 +14,12 @@
 -A INPUT -p udp --dport mdns -d ff02::fb -j ACCEPT
 
 # Allow SSH
--A INPUT -p tcp --dport ssh -m state --state NEW -j ACCEPT
+-A INPUT -p tcp --dport ssh -j ACCEPT
 
 # Allow IPP from sixxs.net subnet
--A INPUT -s 2001:1938:269::/48 -p tcp --dport ipp -m state --state NEW -j ACCEPT
+-A INPUT -s 2001:1938:269::/48 -p tcp --dport ipp -j ACCEPT
 
 # Allow SNMP from onyx
--A INPUT -s 2001:470:21:20::480d:5f2b -p udp --dport snmp -m state --state NEW -j ACCEPT
+-A INPUT -s 2001:470:21:20::480d:5f2b -p udp --dport snmp -j ACCEPT
 
 COMMIT

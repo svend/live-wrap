@@ -13,9 +13,9 @@
 -A INPUT -p udp --dport mdns -d 224.0.0.251 -j ACCEPT
 
 # Allow SSH
--A INPUT -p tcp --dport ssh -m state --state NEW -j ACCEPT
+-A INPUT -p tcp --dport ssh -j ACCEPT
 
 # Allow IPP from private subnet
--A INPUT -s 192.168.0.0/16 -p tcp --dport ipp -m state --state NEW -j ACCEPT
+-A INPUT -s 192.168.0.0/16 -p tcp --dport ipp -j ACCEPT
 
 COMMIT
