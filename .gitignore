@@ -1,6 +1,7 @@
 /binary
 /binary.img
 /binary.list
+/binary.log
 /binary.packages
 /cache
 /chroot
