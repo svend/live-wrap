@@ -2,4 +2,4 @@
 # Enable avahi reflector mode
 
 sed -i '/\<enable-reflector\>/c\
-ennable-reflector=yes' /etc/avahi/avahi-daemon.conf
+enable-reflector=yes' /etc/avahi/avahi-daemon.conf
