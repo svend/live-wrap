@@ -4,7 +4,29 @@
 user=snmp
 pass=$(pwgen -s 8)
 
-net-snmp-config --create-snmpv3-user -ro -a "$pass" $user
+apassphrase=$pass
+
+# The following code is taken from net-snmp-config
+
+Aalgorithm="MD5"
+Xalgorithm="DES"
+
+outdir="/var/lib/snmp"
+outfile="$outdir/snmpd.conf"
+line="createUser $user $Aalgorithm \"$apassphrase\" $Xalgorithm $xpassphrase"
+
+echo "adding the following line to $outfile:"
+echo "  " $line
+# in case it hasn't ever been started yet, start it.
+if test ! -d $outdir ; then
+    mkdir $outdir
+fi
+if test ! -d $outfile ; then
+    touch $outfile
+fi
+echo $line >> $outfile
+
+# End of code is taken from net-snmp-config
 
 # Record generated password
 umask 077
