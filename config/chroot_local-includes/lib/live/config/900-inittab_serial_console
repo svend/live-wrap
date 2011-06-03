@@ -1,6 +1,6 @@
 #!/bin/sh
 # Enable inittab serial console
 
-echo 'T0:23:respawn:/sbin/getty -L ttyS0 38400 vt100' >> /etc/inittab
+echo 'T0:23:respawn:/sbin/getty -l /sbin/sulogin -n -L ttyS0 38400 vt100' >> /etc/inittab
 
 init q
