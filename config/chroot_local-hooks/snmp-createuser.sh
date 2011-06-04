@@ -1,6 +1,9 @@
 #!/bin/sh
 # Create SNMPv3 user
 
+# Do not overwrite local SNMP user configuration
+[ -f /root/.snmp/snmp.conf ] && exit 0
+
 user=snmp
 pass=$(pwgen -s 8)
 
