@@ -14,8 +14,9 @@
 # Allow all established connections
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 
-# Allow SNMP from onyx
+# Allow SNMP from cacti servers
 -A INPUT -s 2001:470:21:20::480d:5f2b -p udp --dport snmp -j ACCEPT
+-A INPUT -s 2001:1938:269:0:5054:ff:feb0:8b1e -p udp --dport snmp -j ACCEPT
 
 # Allow SSH
 -A INPUT -p tcp --dport ssh -j ACCEPT
