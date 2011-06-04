@@ -11,8 +11,12 @@ apassphrase=$pass
 
 # The following code is taken from net-snmp-config
 
+prefix=/usr
+
 Aalgorithm="MD5"
 Xalgorithm="DES"
+
+token="rouser"
 
 outdir="/var/lib/snmp"
 outfile="$outdir/snmpd.conf"
@@ -24,6 +28,15 @@ echo "  " $line
 if test ! -d $outdir ; then
     mkdir $outdir
 fi
+if test ! -d $outfile ; then
+    touch $outfile
+fi
+echo $line >> $outfile
+
+outfile="${prefix}/share/snmp/snmpd.conf"
+line="$token $user"
+echo "adding the following line to $outfile:"
+echo "  " $line
 if test ! -d $outfile ; then
     touch $outfile
 fi
