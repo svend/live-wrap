@@ -1,4 +1,4 @@
 #!/bin/sh
-# Create version file
+# Create live system version file
 
-git describe --long --dirty --always > binary/version-file
+git describe --long --dirty --always > binary/live/live-system-version
