@@ -12,4 +12,4 @@ lb config noauto \
 	--memtest none \
 	--packages-lists minimal \
 	--syslinux-timeout 5 \
-	"$@"
+	"${@}"
