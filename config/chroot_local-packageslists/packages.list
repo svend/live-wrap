@@ -3,6 +3,7 @@ avahi-daemon
 bind9
 dhcp3-server
 hostap-utils
+iw
 ntp
 openssh-server
 radvd
