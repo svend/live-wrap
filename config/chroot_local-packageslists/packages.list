@@ -3,6 +3,7 @@ avahi-daemon
 bind9
 dhcp3-server
 hostap-utils
+hostapd
 iw
 ntp
 openssh-server
