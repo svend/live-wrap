@@ -1,6 +1,7 @@
 aiccu
 avahi-daemon
 bind9
+bridge-utils
 dhcp3-server
 hostap-utils
 hostapd
