@@ -25,6 +25,8 @@
 -A INPUT -i wlan0 -j LAN-INPUT
 -A INPUT -j REJECT --reject-with icmp6-adm-prohibited
 
+-A LAN-INPUT -p udp --dport 5001 -j ACCEPT
+-A LAN-INPUT -p tcp --dport 5001 -j ACCEPT
 -A LAN-INPUT -p udp --dport domain -j ACCEPT
 -A LAN-INPUT -p tcp --dport domain -j ACCEPT
 -A LAN-INPUT -p udp --dport mdns -d ff02::fb -j ACCEPT
