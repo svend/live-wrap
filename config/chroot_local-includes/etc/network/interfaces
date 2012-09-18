@@ -12,8 +12,9 @@ iface eth1 inet static
 	network 192.168.2.0
 	netmask 255.255.255.0
 	broadcast 192.168.2.255
-	up ip -6 addr add 2001:1938:269::1/64 dev $IFACE
-	down ip -6 addr del 2001:1938:269::1/64 dev $IFACE
+iface eth1 inet6 static
+	address 2001:1938:269::1
+	netmask 64
 
 auto wlan0
 iface wlan0 inet static
@@ -22,5 +23,6 @@ iface wlan0 inet static
 	netmask 255.255.255.0
 	broadcast 192.168.3.255
 	hostapd /etc/hostapd/hostapd.conf
-	up ip -6 addr add 2001:1938:269:1::1/64 dev $IFACE
-	down ip -6 addr del 2001:1938:269:1::1/64 dev $IFACE
+iface wlan0 inet6 static
+	address 2001:1938:269:1::1
+	netmask 64
