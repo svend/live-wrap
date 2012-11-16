@@ -1,15 +1,13 @@
 #!/bin/sh
 
 lb config noauto \
+	--apt-indices false \
 	--apt-recommends false \
 	--architecture i386 \
-	--binary-indices false \
-	--binary-images usb-hdd \
-	--bootappend-live "ip=frommedia console=ttyS0,38400n8 nouser username=root quickreboot" \
+	--binary-images hdd \
+	--bootappend-live "ip=frommedia console=ttyS0,38400n8 nouser hostname=pebble username=root quickreboot" \
 	--distribution squeeze \
-	--hostname pebble \
 	--linux-flavours 486 \
 	--memtest none \
-	--packages-lists minimal \
-	--syslinux-timeout 5 \
+	--package-lists minimal \
 	"${@}"
