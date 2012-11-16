@@ -1,0 +1,4 @@
+#!/bin/sh
+# Set syslinux timeout
+
+sed -i 's/^timeout.*/timeout 50/' binary/syslinux/syslinux.cfg
