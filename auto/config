@@ -9,5 +9,4 @@ lb config noauto \
 	--distribution squeeze \
 	--linux-flavours 486 \
 	--memtest none \
-	--package-lists minimal \
 	"${@}"
