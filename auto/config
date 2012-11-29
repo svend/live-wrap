@@ -5,7 +5,7 @@ lb config noauto \
 	--apt-recommends false \
 	--architecture i386 \
 	--binary-images hdd \
-	--bootappend-live "ip=frommedia console=ttyS0,38400n8 nouser hostname=pebble username=root quickreboot" \
+	--bootappend-live "boot=live config ip=frommedia console=ttyS0,38400n8 nouser hostname=pebble username=root quickreboot" \
 	--distribution squeeze \
 	--linux-flavours 486 \
 	--memtest none \
