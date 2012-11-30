@@ -7,7 +7,7 @@ lb config noauto \
 	--binary-images hdd \
 	--bootappend-live "boot=live config ip=frommedia console=ttyS0,38400n8 nouser hostname=pebble username=root quickreboot" \
 	--distribution squeeze \
-	--firmware false \
+	--firmware-chroot false \
 	--linux-flavours 486 \
 	--memtest none \
 	"${@}"
