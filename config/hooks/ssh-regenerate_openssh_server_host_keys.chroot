@@ -1,0 +1,4 @@
+#!/bin/sh
+# Regenerate OpenSSH host keys, which are removed by live-build hook
+
+dpkg-reconfigure openssh-server
