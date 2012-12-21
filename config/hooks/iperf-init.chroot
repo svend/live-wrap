@@ -1,0 +1,5 @@
+#!/bin/sh
+# Enable iperf init scripts
+
+update-rc.d iperf-tcp defaults
+update-rc.d iperf-udp defaults
