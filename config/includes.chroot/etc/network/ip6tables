@@ -22,7 +22,6 @@
 -A INPUT -p tcp --dport ssh -j ACCEPT
 
 -A INPUT -i eth1 -j LAN-INPUT
--A INPUT -i wlan0 -j LAN-INPUT
 -A INPUT -j REJECT --reject-with icmp6-adm-prohibited
 
 -A LAN-INPUT -p udp --dport 5001 -j ACCEPT

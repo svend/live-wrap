@@ -2,7 +2,6 @@ aiccu
 avahi-daemon
 bind9
 dhcp3-server
-hostapd
 ntp
 openssh-server
 radvd
