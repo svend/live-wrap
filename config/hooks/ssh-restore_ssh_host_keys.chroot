@@ -1,0 +1,5 @@
+#!/bin/sh
+# Restore backup host keys
+
+mv -f /etc/ssh/keys/* /etc/ssh || true
+rmdir /etc/ssh/keys || true
