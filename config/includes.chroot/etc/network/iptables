@@ -27,8 +27,10 @@ COMMIT
 # Allow SSH
 -A INPUT -p tcp --dport ssh -j ACCEPT
 
--A INPUT -i eth1.1 -j LAN-INPUT
--A INPUT -i eth1.3 -j LAN-INPUT
+-A INPUT -i eth1.100 -j LAN-INPUT
+-A INPUT -i eth1.101 -j LAN-INPUT
+-A INPUT -i eth1.102 -j LAN-INPUT
+-A INPUT -i eth1.103 -j LAN-INPUT
 -A INPUT -j REJECT --reject-with icmp-host-prohibited
 
 -A LAN-INPUT -p udp --dport 5001 -j ACCEPT

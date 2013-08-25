@@ -8,4 +8,4 @@
 
 # On what interfaces should the DHCP server (dhcpd) serve DHCP requests?
 #	Separate multiple interfaces with spaces, e.g. "eth0 eth1".
-INTERFACES="eth1.1 eth1.3"
+INTERFACES="eth1.100 eth1.101 eth1.102 eth1.103"
